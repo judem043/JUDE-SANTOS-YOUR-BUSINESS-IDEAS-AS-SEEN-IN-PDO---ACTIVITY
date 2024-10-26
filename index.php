@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $rental_price = $_POST['rental_price'] ?? null;
 
     if ($car_model && $rental_price) {
-        insertCar($pdo, $car_model, $rental_price);
+        insertCar($pdo, $car_model, $rental_price);    
         echo "<p style='color: white;'><strong>Car inserted successfully.</strong></p>";
     } else {
         echo "<p style='color: red;'><strong>Please fill in all required fields.</strong></p>";
@@ -58,15 +58,15 @@ $cars = getAllCars($pdo);
         .container {
             width: 60%;
             margin: auto;
-            background: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 8px;
             box-shadow: inset 0vw 0vw 0vw .1vw #d422cc, 
                         0vw 0vw 1.5vw 0vw #ff04de, 
                         0vw 0vw 1.5vw 0vw #d422cc;
             margin-top: 50px;
-            backdrop-filter: blur(10px); /* Adjust the blur intensity here */
-            border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: add a border for better visibility */
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 
